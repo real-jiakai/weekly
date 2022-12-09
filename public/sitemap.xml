@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jiakai.page/</loc>
+    <lastmod>2022-11-07T15:05:47+08:00</lastmod>
+  </url><url>
+    <loc>https://jiakai.page/hugo/</loc>
+    <lastmod>2022-11-07T15:05:47+08:00</lastmod>
+  </url><url>
+    <loc>https://jiakai.page/2022/11/hugo-remove-trailing-slash/</loc>
+    <lastmod>2022-11-07T15:05:47+08:00</lastmod>
+  </url><url>
+    <loc>https://jiakai.page/</loc>
+    <lastmod>2022-11-07T15:05:47+08:00</lastmod>
+  </url><url>
+    <loc>https://jiakai.page/2022/11/hugo-bear-theme-add-fancybox/</loc>
+    <lastmod>2022-11-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jiakai.page/about/</loc>
+  </url>
+</urlset>

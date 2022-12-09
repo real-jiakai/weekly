@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on ʕ•ᴥ•ʔ 链享</title>
+    <link>https://jiakai.page/</link>
+    <description>Recent content in Blog on ʕ•ᴥ•ʔ 链享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2022, Jiakai</copyright>
+    <lastBuildDate>Mon, 07 Nov 2022 15:05:47 +0800</lastBuildDate><atom:link href="https://jiakai.page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo博客url删除末尾斜杠</title>
+      <link>https://jiakai.page/2022/11/hugo-remove-trailing-slash/</link>
+      <pubDate>Mon, 07 Nov 2022 15:05:47 +0800</pubDate>
+      
+      <guid>https://jiakai.page/2022/11/hugo-remove-trailing-slash/</guid>
+      <description>1.背景 从今年上半年第一次接触Hugo博客开始，就一直对Hugo博客的url不爽。如http://localhost:1313/2022/11/hugo-bear-theme-add-fancybox/，
+我并不需要末尾的/。Hugo社区以及其它的技术社区都对此进行过讨论，有兴趣的可以自行搜索。
+在网上找了很多解决法子，均是在根目录的配置文件config.toml中新增一个选项uglyurls = true，但是我添加过后，发现/并没有去除。
+在暑假的时候，没事翻阅Hugo官方文档的时候，发现了这么一段话，如下图所示：
+除了在根目录下新增uglyurls = true选项外，你还可以在运行hugo命令的时候，设置环境变量。
+2.操作步骤 静态博客部署到Netlify或Vercel的操作非常简单，将本地的hugo博客文件夹先Push到GitHub，然后打开Netlify，从GitHub导入hugo博客仓库，Netlify或Vercel会自动识别项目框架，你只需导入后，点击部署即可。这边以Netlify为例。
+将站点部署到netlify，在部署的时候，设置环境变量【Key=HUGO_UGLYURLS，Value=true】。 最终效果 3.参考链接 ugly-urls</description>
+    </item>
+    
+    <item>
+      <title>Hugo博客Bear主题添加Fancybox灯箱</title>
+      <link>https://jiakai.page/2022/11/hugo-bear-theme-add-fancybox/</link>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiakai.page/2022/11/hugo-bear-theme-add-fancybox/</guid>
+      <description>1.背景 静态博客，点击图片没有放大效果，对于读者而言，不友好。
+有很多解决方案，能解决这一诟病。如Fancybox、Medium Zoom、Light Gallery等。 本文基于Hugo博客Bear主题，略作修改，使博客获得点击图片，图片会放大的功能。
+2.操作步骤 在Hugo博客的根目录下的static文件夹下新建js文件夹，在里面新建一个js文件。 .├── archetypes├── content├── data├── layouts├── public├── resources├── static│ └── js│ └── custom.js└── themes 在新建的js文件中增添以下代码。以下代码采用的是jquery语法，选择所有的img标签，在外面包裹一层a标签。包裹a标签的原因可以见文末Fancybox官方文档的样例。 $(document).ready(function() { $(&amp;#34;img&amp;#34;).each(function() { var currentImage = $(this); currentImage.wrap(&amp;#34;&amp;lt;a href=&amp;#39;&amp;#34; + currentImage.attr(&amp;#34;src&amp;#34;) + &amp;#34;&amp;#39; data-fancybox=&amp;#39;gallery&amp;#39; data-caption=&amp;#39;&amp;#34; + currentImage.attr(&amp;#34;alt&amp;#34;) + &amp;#34;&amp;#39;&amp;gt;&amp;lt;/a&amp;gt;&amp;#34;); }); }); 根据以下路径，找到baseof.html的位置。 themes└── hugo-bearblog└── layouts└── _default└── baseof.html 在head标签末尾引入Fancybox的css样式表；在main标签的末尾，依次引入JQuery文件、Fancybox的js文件以及刚才自定义的js文件。【注意以下代码中前面含+号的标识。】 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;{{ with .</description>
+    </item>
+    
+  </channel>
+</rss>

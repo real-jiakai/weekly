@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://jiakai.page/images/favicon.png" />
+<title>Hugo博客Bear主题添加Fancybox灯箱 | ʕ•ᴥ•ʔ 链享</title>
+<meta name="title" content="Hugo博客Bear主题添加Fancybox灯箱" />
+<meta name="description" content="1.背景 静态博客，点击图片没有放大效果，对于读者而言，不友好。
+有很多解决方案，能解决这一诟病。如Fancybox、Medium Zoom、Light Gallery等。 本文基于Hugo博客Bear主题，略作修改，使博客获得点击图片，图片会放大的功能。
+2.操作步骤 在Hugo博客的根目录下的static文件夹下新建js文件夹，在里面新建一个js文件。 .├── archetypes├── content├── data├── layouts├── public├── resources├── static│ └── js│ └── custom.js└── themes 在新建的js文件中增添以下代码。以下代码采用的是jquery语法，选择所有的img标签，在外面包裹一层a标签。包裹a标签的原因可以见文末Fancybox官方文档的样例。 $(document).ready(function() { $(&#34;img&#34;).each(function() { var currentImage = $(this); currentImage.wrap(&#34;&lt;a href=&#39;&#34; &#43; currentImage.attr(&#34;src&#34;) &#43; &#34;&#39; data-fancybox=&#39;gallery&#39; data-caption=&#39;&#34; &#43; currentImage.attr(&#34;alt&#34;) &#43; &#34;&#39;&gt;&lt;/a&gt;&#34;); }); }); 根据以下路径，找到baseof.html的位置。 themes└── hugo-bearblog└── layouts└── _default└── baseof.html 在head标签末尾引入Fancybox的css样式表；在main标签的末尾，依次引入JQuery文件、Fancybox的js文件以及刚才自定义的js文件。【注意以下代码中前面含&#43;号的标识。】 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;{{ with ." />
+<meta name="keywords" content="hugo," />
+
+
+<meta property="og:title" content="Hugo博客Bear主题添加Fancybox灯箱" />
+<meta property="og:description" content="1.背景 静态博客，点击图片没有放大效果，对于读者而言，不友好。
+有很多解决方案，能解决这一诟病。如Fancybox、Medium Zoom、Light Gallery等。 本文基于Hugo博客Bear主题，略作修改，使博客获得点击图片，图片会放大的功能。
+2.操作步骤 在Hugo博客的根目录下的static文件夹下新建js文件夹，在里面新建一个js文件。 .├── archetypes├── content├── data├── layouts├── public├── resources├── static│ └── js│ └── custom.js└── themes 在新建的js文件中增添以下代码。以下代码采用的是jquery语法，选择所有的img标签，在外面包裹一层a标签。包裹a标签的原因可以见文末Fancybox官方文档的样例。 $(document).ready(function() { $(&#34;img&#34;).each(function() { var currentImage = $(this); currentImage.wrap(&#34;&lt;a href=&#39;&#34; &#43; currentImage.attr(&#34;src&#34;) &#43; &#34;&#39; data-fancybox=&#39;gallery&#39; data-caption=&#39;&#34; &#43; currentImage.attr(&#34;alt&#34;) &#43; &#34;&#39;&gt;&lt;/a&gt;&#34;); }); }); 根据以下路径，找到baseof.html的位置。 themes└── hugo-bearblog└── layouts└── _default└── baseof.html 在head标签末尾引入Fancybox的css样式表；在main标签的末尾，依次引入JQuery文件、Fancybox的js文件以及刚才自定义的js文件。【注意以下代码中前面含&#43;号的标识。】 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;{{ with ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jiakai.page/2022/11/hugo-bear-theme-add-fancybox/" /><meta property="og:image" content="https://jiakai.page/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-11-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-07T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jiakai.page/images/share.png"/>
+
+<meta name="twitter:title" content="Hugo博客Bear主题添加Fancybox灯箱"/>
+<meta name="twitter:description" content="1.背景 静态博客，点击图片没有放大效果，对于读者而言，不友好。
+有很多解决方案，能解决这一诟病。如Fancybox、Medium Zoom、Light Gallery等。 本文基于Hugo博客Bear主题，略作修改，使博客获得点击图片，图片会放大的功能。
+2.操作步骤 在Hugo博客的根目录下的static文件夹下新建js文件夹，在里面新建一个js文件。 .├── archetypes├── content├── data├── layouts├── public├── resources├── static│ └── js│ └── custom.js└── themes 在新建的js文件中增添以下代码。以下代码采用的是jquery语法，选择所有的img标签，在外面包裹一层a标签。包裹a标签的原因可以见文末Fancybox官方文档的样例。 $(document).ready(function() { $(&#34;img&#34;).each(function() { var currentImage = $(this); currentImage.wrap(&#34;&lt;a href=&#39;&#34; &#43; currentImage.attr(&#34;src&#34;) &#43; &#34;&#39; data-fancybox=&#39;gallery&#39; data-caption=&#39;&#34; &#43; currentImage.attr(&#34;alt&#34;) &#43; &#34;&#39;&gt;&lt;/a&gt;&#34;); }); }); 根据以下路径，找到baseof.html的位置。 themes└── hugo-bearblog└── layouts└── _default└── baseof.html 在head标签末尾引入Fancybox的css样式表；在main标签的末尾，依次引入JQuery文件、Fancybox的js文件以及刚才自定义的js文件。【注意以下代码中前面含&#43;号的标识。】 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;{{ with ."/>
+
+
+
+<meta itemprop="name" content="Hugo博客Bear主题添加Fancybox灯箱">
+<meta itemprop="description" content="1.背景 静态博客，点击图片没有放大效果，对于读者而言，不友好。
+有很多解决方案，能解决这一诟病。如Fancybox、Medium Zoom、Light Gallery等。 本文基于Hugo博客Bear主题，略作修改，使博客获得点击图片，图片会放大的功能。
+2.操作步骤 在Hugo博客的根目录下的static文件夹下新建js文件夹，在里面新建一个js文件。 .├── archetypes├── content├── data├── layouts├── public├── resources├── static│ └── js│ └── custom.js└── themes 在新建的js文件中增添以下代码。以下代码采用的是jquery语法，选择所有的img标签，在外面包裹一层a标签。包裹a标签的原因可以见文末Fancybox官方文档的样例。 $(document).ready(function() { $(&#34;img&#34;).each(function() { var currentImage = $(this); currentImage.wrap(&#34;&lt;a href=&#39;&#34; &#43; currentImage.attr(&#34;src&#34;) &#43; &#34;&#39; data-fancybox=&#39;gallery&#39; data-caption=&#39;&#34; &#43; currentImage.attr(&#34;alt&#34;) &#43; &#34;&#39;&gt;&lt;/a&gt;&#34;); }); }); 根据以下路径，找到baseof.html的位置。 themes└── hugo-bearblog└── layouts└── _default└── baseof.html 在head标签末尾引入Fancybox的css样式表；在main标签的末尾，依次引入JQuery文件、Fancybox的js文件以及刚才自定义的js文件。【注意以下代码中前面含&#43;号的标识。】 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;{{ with ."><meta itemprop="datePublished" content="2022-11-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-11-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="118"><meta itemprop="image" content="https://jiakai.page/images/share.png"/>
+<meta itemprop="keywords" content="hugo," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>ʕ•ᴥ•ʔ 链享</h2>
+</a>
+<nav>
+<a href="/">Blog</a>
+
+<a href="/about">About</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Hugo博客Bear主题添加Fancybox灯箱</h1>
+<p>
+  <i>
+    <time datetime='2022-11-07' pubdate>
+      07 Nov, 2022
+    </time>
+  </i>
+</p>
+
+<content>
+  <h2 id="1背景">1.背景</h2>
+<p>静态博客，点击图片没有放大效果，对于读者而言，不友好。</p>
+<p>有很多解决方案，能解决这一诟病。如Fancybox、Medium Zoom、Light Gallery等。
+本文基于Hugo博客Bear主题，略作修改，使博客获得点击图片，图片会放大的功能。</p>
+<h2 id="2操作步骤">2.操作步骤</h2>
+<ol>
+<li>在Hugo博客的根目录下的static文件夹下新建js文件夹，在里面新建一个js文件。</li>
+</ol>
+<pre tabindex="0"><code>.
+├── archetypes
+├── content
+├── data
+├── layouts
+├── public
+├── resources
+├── static
+│   └── js
+│       └── custom.js
+└── themes
+</code></pre><ol start="2">
+<li>在新建的js文件中增添以下代码。以下代码采用的是jquery语法，选择所有的img标签，在外面包裹一层a标签。包裹a标签的原因可以见文末Fancybox官方文档的样例。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;img&#34;</span>).<span style="color:#a6e22e">each</span>(<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">currentImage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">currentImage</span>.<span style="color:#a6e22e">wrap</span>(<span style="color:#e6db74">&#34;&lt;a href=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">currentImage</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;src&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; data-fancybox=&#39;gallery&#39; data-caption=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">currentImage</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;alt&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&gt;&lt;/a&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><ol start="3">
+<li>根据以下路径，找到baseof.html的位置。</li>
+</ol>
+<pre tabindex="0"><code>themes
+└── hugo-bearblog
+    └── layouts
+        └── _default
+            └── baseof.html
+</code></pre><ol start="4">
+<li>在head标签末尾引入Fancybox的css样式表；在main标签的末尾，依次引入JQuery文件、Fancybox的js文件以及刚才自定义的js文件。【注意以下代码中前面含<code>+</code>号的标识。】</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  ......
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>+   &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>    ......
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    {{- block &#34;main&#34; . }}{{- end }}
+</span></span><span style="display:flex;"><span>+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://code.jquery.com/jquery-3.4.1.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/custom.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>   ......
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>最终效果：</p>
+<p><img src="https://lipsum.app/id/47/200x150" alt="测试1"></p>
+<p><img src="https://lipsum.app/id/46/200x150" alt="测试2"></p>
+<h2 id="3参考链接">3.参考链接</h2>
+<p><a href="https://www.hostarr.com/fancybox/">使用 FancyBox 为图片添加放大及相册功能</a></p>
+<p><a href="https://fancyapps.com/fancybox/">Fancybox官方文档</a></p>
+
+</content>
+<p>
+  
+  <a href="https://jiakai.page/hugo/">#hugo</a>
+  
+</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="/js/custom.js"></script>
+  </main>
+  <footer>
+<span>Made with ❤️ By <a href="https://blog.gujiakai.top" target="_blank">Jiakai</a></span> <br/>
+<span>Theme: <a href="https://github.com/janraasch/hugo-bearblog/" target="_blank">Hugo ʕ•ᴥ•ʔ Bear</a></span>
+
+</footer>
+
+    
+</body>
+
+</html>
