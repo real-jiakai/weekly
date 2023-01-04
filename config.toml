@@ -27,10 +27,14 @@ ignoreErrors = ["error-disable-taxonomy"]
   url = '/'
   weight = 10
 [[menu.main]]
+  name = '阅读分享'
+  url = 'https://reading.gujiakai.top'
+  weight = 20
+[[menu.main]]
   identifier = 'about'
   name = 'About'
   url = '/about'
-  weight = 20
+  weight = 30
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
