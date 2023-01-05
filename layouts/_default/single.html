@@ -11,11 +11,20 @@
 {{ end }}{{ end }}
 <content>
   {{ .Content }}
-  <div id="waline"></div>
 </content>
 <p>
   {{ range (.GetTerms "tags") }}
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
   {{ end }}
 </p>
+<div id="waline"></div>
+<script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    init({
+    el: '#waline',
+    serverURL: 'https://remark.divintoanything.com',
+    reaction: true,
+    lang: 'zh-CN',
+    });
+</script>
 {{ end }}

@@ -7,22 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {{- partial "favicon.html" . -}}
   <title>{{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}</title>
-
   {{- partial "seo_tags.html" . -}}
   <meta name="referrer" content="no-referrer-when-downgrade" />
-
   {{ with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
-
   {{- partial "style.html" . -}}
-
 
   <!-- A partial to be overwritten by the user.
   Simply place a custom_head.html into
   your local /layouts/partials-directory -->
   {{- partial "custom_head.html" . -}}
-
   <link rel="stylesheet" href="https://static.gujiakai.top/static/fancybox/fancybox.css"/>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
   <!-- 百度统计 -->
@@ -46,33 +41,23 @@
 </head>
 
 <body>
+
   <header>
     {{- partial "header.html" . -}}
   </header>
+
   <main>
     {{- block "main" . }}{{- end }}
-    
-    <script type="module">
-      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-      init({
-        el: '#waline',
-        serverURL: 'https://remark.divintoanything.com',
-        reaction: true,
-        lang: 'zh-CN',
-      });
-    </script>
     <script src="https://static.gujiakai.top/static/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://static.gujiakai.top/static/fancybox/fancybox.umd.js"></script>
     <script src="/js/custom.js"></script>
   </main>
+
+  {{- partial "custom_body.html" . -}}
+
   <footer>
     {{- partial "footer.html" . -}}
   </footer>
-
-  <!-- A partial to be overwritten by the user.
-  Simply place a custom_body.html into
-  your local /layouts/partials-directory -->
-  {{- partial "custom_body.html" . -}}
 </body>
 
 </html>
