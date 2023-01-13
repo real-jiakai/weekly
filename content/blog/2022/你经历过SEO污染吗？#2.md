@@ -1,9 +1,9 @@
-+++
-title = "你经历过SEO污染吗？ #2"
-date = "2022-04-15T15:05:47+08:00"
-slug = "weekly-issue-02"
-tags = ["weekly"]
-+++
+---
+title: "你经历过SEO污染吗？ #2"
+date: "2022-04-15T15:05:47+08:00"
+slug: "weekly-issue-02"
+tags: ["weekly"]
+---
 
 欢迎打开第2期的「周见」，本期的主题是「你经历过SEO污染吗？」。
 
