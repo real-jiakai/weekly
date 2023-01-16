@@ -1,3 +1,2 @@
 User-Agent: *
-Sitemap: {{ "sitemap.xml" | absURL }}
-Disallow: /?ref=https://githubhelp.com
+Sitemap: https://gujiakai.top/sitemap.xml
