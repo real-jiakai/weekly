@@ -87,3 +87,5 @@ ignoreErrors = ["error-disable-taxonomy"]
       hardWraps = false
       unsafe = true
       xhtml = false
+
+disqusShortname = 'weekly-2'

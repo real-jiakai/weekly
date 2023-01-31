@@ -17,14 +17,5 @@
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
   {{ end }}
 </p>
-<div id="waline"></div>
-<script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-    init({
-    el: '#waline',
-    serverURL: 'https://remark-weekly-s.gujiakai.top',
-    reaction: true,
-    lang: 'zh-CN',
-    });
-</script>
+{{ template "_internal/disqus.html" . }}
 {{ end }}
