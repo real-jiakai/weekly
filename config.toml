@@ -13,6 +13,8 @@ languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
+# Disqus
+disqusShortname = 'weekly-2'
 
 # Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
 disableKinds = ["taxonomy"]
@@ -87,5 +89,3 @@ ignoreErrors = ["error-disable-taxonomy"]
       hardWraps = false
       unsafe = true
       xhtml = false
-
-disqusShortname = 'weekly-2'
