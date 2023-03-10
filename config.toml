@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
 # Basic metadata configuration for your blog.
 title = "ʕ•ᴥ•ʔ 周见"
 author = "Jiakai"
-copyright = "Copyright © 2022-2023, Jiakai"
+copyright = "© 2022-2023 Made with ❤️ By Jiakai"
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
