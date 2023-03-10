@@ -14,13 +14,29 @@
   {{ end -}}
   {{- partial "style.html" . -}}
 
-  <!-- A partial to be overwritten by the user.
-  Simply place a custom_head.html into
-  your local /layouts/partials-directory -->
-  {{- partial "custom_head.html" . -}}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/fancybox.css"/>
+  <link rel="stylesheet" href="/css/APlayer.min.css">
+</head>
+
+<body>
+
+  <header>
+    {{- partial "header.html" . -}}
+  </header>
+
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
+
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
+
+</body>
+  <script src="/js/APlayer.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/fancybox.umd.js"></script>
+  <script src="/js/custom.js"></script>
   <!-- 百度统计 -->
   <script>
     var _hmt = _hmt || [];
@@ -37,30 +53,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-MV0ELWDBYM');
   </script>
   <!-- umami -->
   <script async defer data-website-id="89984862-f5d1-4d17-9cb1-54c121ea604d" src="https://umami.gujiakai.top/umami.js"></script>
-</head>
-
-<body>
-
-  <header>
-    {{- partial "header.html" . -}}
-  </header>
-
-  <main>
-    {{- block "main" . }}{{- end }}
-  </main>
-
-  {{- partial "custom_body.html" . -}}
-
-  <footer>
-    {{- partial "footer.html" . -}}
-  </footer>
-</body>
-<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<script src="/js/custom.js"></script>
 </html>

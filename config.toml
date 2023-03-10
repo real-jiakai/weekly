@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
 # Basic metadata configuration for your blog.
 title = "ʕ•ᴥ•ʔ 周见"
 author = "Jiakai"
-copyright = "Copyright © 2022, Jiakai"
+copyright = "Copyright © 2022-2023, Jiakai"
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
@@ -64,7 +64,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # file. See [Hugo's Format function docs](https://gohugo.io/functions/format/)
   # for details. An example TOML config that uses [ISO
   # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
-  # dateFormat = "2006-01-02"
+  dateFormat = "2006-01-02"
 
 [markup]
   [markup.goldmark]
@@ -87,3 +87,4 @@ ignoreErrors = ["error-disable-taxonomy"]
       hardWraps = false
       unsafe = true
       xhtml = false
+
