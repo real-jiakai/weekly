@@ -2,4 +2,4 @@
 
 # Introduction
 
-This repo stores weeklt site.
+This repo stores weekly site.
